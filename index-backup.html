@@ -1,0 +1,1462 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday Sayangku Cintaku ❤️ | Ultra Cinema V4 Romantic Premium</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+overflow:hidden;
+background:#000;
+color:white;
+height:100vh;
+}
+
+/* =========================
+   ULTRA V4 BACKGROUND
+========================= */
+
+.bg{
+position:fixed;
+inset:0;
+background:
+linear-gradient(
+-45deg,
+#ff8fc7,
+#ffd6e7,
+#c9a0ff,
+#ffb7d5,
+#ff7eb3,
+#ff9ed2
+);
+background-size:600% 600%;
+animation:bgMove 18s ease infinite;
+z-index:-10;
+}
+
+@keyframes bgMove{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+body::before{
+content:"";
+position:fixed;
+inset:0;
+background:
+radial-gradient(
+circle at center,
+transparent 15%,
+rgba(0,0,0,.35) 100%
+);
+pointer-events:none;
+z-index:-5;
+}
+
+/* =========================
+   INTRO
+========================= */
+
+#intro{
+position:fixed;
+inset:0;
+background:black;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+z-index:9999;
+}
+
+#intro h1{
+    font-size:clamp(38px, 10vw, 70px);
+    line-height:1.1;
+    text-align:center;
+}
+
+#intro p{
+margin-top:20px;
+font-size:22px;
+line-height:1.8;
+}
+
+.intro-name{
+font-family:'Great Vibes',cursive;
+font-size:clamp(60px,14vw,110px);
+font-weight:normal;
+color:white;
+text-shadow:
+0 0 20px rgba(255,255,255,.9),
+0 0 40px rgba(255,105,180,.7);
+animation:introGlow 2s infinite alternate;
+}
+
+.intro-subtitle{
+font-size:30px;
+font-weight:600;
+margin-top:15px;
+}
+
+.intro-date{
+font-size:22px;
+margin-top:12px;
+opacity:.9;
+}
+
+.intro-days{
+font-size:22px;
+margin-top:12px;
+color:#ffd6e7;
+}
+
+@keyframes introGlow{
+
+from{
+text-shadow:0 0 10px white;
+}
+
+to{
+text-shadow:
+0 0 25px white,
+0 0 50px pink,
+0 0 80px pink;
+}
+
+}
+
+/* =========================
+   PREMIUM ENVELOPE
+========================= */
+
+#envelopeScreen{
+position:fixed;
+inset:0;
+display:none;
+justify-content:center;
+align-items:center;
+z-index:1000;
+}
+
+.envelope3d{
+position:relative;
+width:340px;
+height:240px;
+cursor:pointer;
+animation:floatEnvelope 3s ease-in-out infinite;
+}
+
+.envelope-back{
+position:absolute;
+inset:0;
+background:#f8c6db;
+border-radius:12px;
+box-shadow:0 25px 60px rgba(0,0,0,.25);
+z-index:1;
+}
+
+.letter-paper{
+position:absolute;
+width:82%;
+height:140px;
+left:50%;
+bottom:20px;
+transform:translateX(-50%);
+background:white;
+border-radius:12px;
+padding:20px;
+text-align:center;
+color:#ff4f9a;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,.15);
+z-index:2;
+transition:1.5s ease;
+}
+
+.letter-paper h2{
+margin-top:10px;
+font-size:24px;
+}
+
+.letter-paper p{
+margin-top:10px;
+font-size:15px;
+}
+
+.envelope-left{
+position:absolute;
+left:0;
+bottom:0;
+width:0;
+height:0;
+border-top:120px solid transparent;
+border-bottom:120px solid transparent;
+border-left:170px solid #efb2cf;
+z-index:4;
+}
+
+.envelope-right{
+position:absolute;
+right:0;
+bottom:0;
+width:0;
+height:0;
+border-top:120px solid transparent;
+border-bottom:120px solid transparent;
+border-right:170px solid #efb2cf;
+z-index:4;
+}
+
+.envelope-bottom{
+position:absolute;
+left:0;
+bottom:0;
+width:0;
+height:0;
+border-left:170px solid transparent;
+border-right:170px solid transparent;
+border-bottom:120px solid #e99cc2;
+z-index:5;
+}
+
+.envelope-flap{
+position:absolute;
+top:0;
+left:0;
+width:0;
+height:0;
+border-left:170px solid transparent;
+border-right:170px solid transparent;
+border-top:130px solid #f3bfd7;
+transform-origin:top center;
+transition:1.4s ease;
+z-index:6;
+}
+
+.envelope3d.open .envelope-flap{
+transform:rotateX(180deg);
+z-index:1;
+}
+
+.envelope3d.open .letter-paper{
+transform:
+translateX(-50%)
+translateY(-170px);
+}
+
+@keyframes floatEnvelope{
+0%,100%{
+transform:translateY(0);
+}
+50%{
+transform:translateY(-12px);
+}
+}
+
+/* =========================
+   MAIN SCENE
+========================= */
+
+#scene{
+position:absolute;
+inset:0;
+display:none;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+padding:20px;
+overflow-y:auto;
+gap:10px;
+}
+
+/* =========================
+   POLAROID PREMIUM
+========================= */
+
+#photoFrame{
+position:relative;
+width:260px;
+height:360px; /* sebelumnya 460px */
+padding:12px;
+padding-top:55px; /* ruang khusus untuk tulisan memories */
+background:white;
+border-radius:25px;
+overflow:visible; /* sebelumnya hidden */
+transform:rotate(-3deg);
+
+box-shadow:
+0 20px 60px rgba(0,0,0,.45),
+0 0 30px rgba(255,255,255,.3);
+}
+
+#photo{
+width:95%;
+height:95%;
+object-fit:cover;
+border-radius:15px;
+margin:20px auto 0;
+box-shadow:
+0 0 25px rgba(255,255,255,.3),
+0 0 50px rgba(255,105,180,.25);
+display:block;
+transition:1s ease;
+transform: translateY(-20px);
+}
+
+.birthday-badge{
+position:absolute;
+top:12px;
+left:12%;
+transform:none;
+padding:10px 20px;
+background:rgba(0,0,0,.45);
+backdrop-filter:blur(10px);
+border-radius:50px;
+font-size:13px;
+font-weight:bold;
+
+white-space:nowrap;
+
+z-index:20;
+
+box-shadow:
+0 0 15px rgba(255,255,255,.2);
+}
+
+.sparkle{
+position:absolute;
+font-size:28px;
+z-index:10;
+animation:sparkle 2s infinite;
+}
+
+.sparkle1{
+top:15px;
+right:20px;
+}
+
+.sparkle2{
+bottom:25px;
+left:20px;
+animation-delay:1s;
+}
+
+@keyframes sparkle{
+50%{
+transform:scale(1.4) rotate(20deg);
+}
+}
+
+.photo-name{
+margin-top:15px;
+font-size:28px;
+font-weight:bold;
+text-align:center;
+font-family:'Great Vibes',cursive;
+text-shadow:
+0 0 10px white,
+0 0 25px pink;
+}
+
+#loveCounter{
+margin-top:10px;
+font-size:18px;
+}
+
+/* =========================
+   LETTER
+========================= */
+
+#letter{
+margin-top:15px;
+width:95%;
+max-width:900px;
+min-height:180px;
+max-height:220px;
+padding:22px;
+border-radius:30px;
+background:rgba(255,255,255,.12);
+backdrop-filter:blur(20px);
+font-size:18px;
+line-height:1.7;
+text-align:center;
+white-space:pre-wrap;
+overflow-y:auto;
+box-shadow:0 15px 40px rgba(0,0,0,.25);
+border:1px solid rgba(255,255,255,.15);
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+#nextBtn{
+margin-top:15px;
+margin-bottom:25px;
+padding:15px 35px;
+border:none;
+border-radius:50px;
+cursor:pointer;
+font-size:18px;
+color:white;
+background:
+linear-gradient(
+45deg,
+#ff4f9a,
+#ff84c9
+);
+}
+
+/* =========================
+   ENDING
+========================= */
+
+#ending{
+display:none;
+position:fixed;
+inset:0;
+background:rgba(0,0,0,.92);
+justify-content:center;
+align-items:center;
+text-align:center;
+z-index:999;
+animation:fadeIn 2s ease;
+}
+
+#ending h1{
+font-size:60px;
+animation:glowText 3s ease-in-out infinite;
+}
+
+#ending p{
+margin-top:20px;
+font-size:22px;
+line-height:1.8;
+opacity:0;
+animation:fadeText 2s ease forwards;
+animation-delay:1s;
+}
+
+@keyframes pulse{
+50%{
+transform:scale(1.02);
+}
+}
+
+/* =========================
+   PARTICLES
+========================= */
+
+.particle{
+position:fixed;
+pointer-events:none;
+z-index:2;
+animation:fall linear forwards;
+}
+
+@keyframes fall{
+to{
+transform:
+translateY(110vh)
+rotate(360deg);
+}
+}
+/* =========================
+   V4.2 PREMIUM EFFECT
+========================= */
+
+.polaroidRotate{
+transform:rotate(-0deg);
+transition:.8s;
+}
+
+.polaroidRotate:hover{
+transform:rotate(0deg) scale(1.02);
+}
+
+#photo{
+box-shadow:
+0 0 20px rgba(255,255,255,.3),
+0 0 50px rgba(255,105,180,.25);
+}
+
+#loveCounter{
+font-weight:600;
+font-size:20px;
+animation:counterGlow 2s infinite alternate;
+}
+
+@keyframes counterGlow{
+from{
+text-shadow:0 0 10px pink;
+}
+to{
+text-shadow:
+0 0 20px pink,
+0 0 35px white;
+}
+}
+
+#nextBtn{
+box-shadow:
+0 0 20px rgba(255,105,180,.4);
+transition:.3s;
+}
+
+#nextBtn:hover{
+transform:scale(1.08);
+box-shadow:
+0 0 30px rgba(255,105,180,.8);
+}
+
+.rose{
+position:fixed;
+top:-30px;
+pointer-events:none;
+z-index:1;
+animation:roseFall linear forwards;
+}
+
+@keyframes roseFall{
+to{
+transform:
+translateY(110vh)
+rotate(360deg);
+}
+}
+/* =========================
+   SCRAPBOOK PREMIUM
+========================= */
+
+.tape{
+position:absolute;
+width:95px;
+height:26px;
+background:rgba(255,255,255,.65);
+backdrop-filter:blur(4px);
+z-index:40;
+box-shadow:
+0 4px 10px rgba(0,0,0,.15);
+}
+
+.tape1{
+top:12px;
+left:-18px;
+transform:rotate(-28deg);
+}
+
+.tape2{
+top:12px;
+right:-18px;
+transform:rotate(28deg);
+}
+
+.sticker{
+position:absolute;
+z-index:45;
+font-size:34px;
+animation:floatSticker 3s ease-in-out infinite;
+}
+
+.sticker1{
+right:12px;
+bottom:18px;
+}
+
+.sticker2{
+left:12px;
+top:85px;
+animation-delay:1s;
+}
+
+.sticker3{
+right:15px;
+top:90px;
+animation-delay:2s;
+}
+
+.doodle{
+position:absolute;
+font-size:24px;
+z-index:40;
+opacity:.9;
+}
+
+.doodle1{
+top:150px;
+right:12px;
+}
+
+.doodle2{
+bottom:100px;
+left:10px;
+}
+
+@keyframes floatSticker{
+0%,100%{
+transform:translateY(0);
+}
+50%{
+transform:translateY(-8px);
+}
+}
+
+.dateStamp{
+position:absolute;
+bottom:12px;
+left:15px;
+
+padding:4px 8px;
+
+border:2px dashed #ff7eb3;
+
+border-radius:10px;
+
+font-size:9px;
+font-weight:600;
+
+color:#ff4f9a;
+
+background:white;
+
+z-index:50;
+}
+
+.memoryTag{
+position:absolute;
+bottom:15px;
+left:50%;
+transform:translateX(-50%);
+
+padding:4px 10px;
+background:white;
+border-radius:20px;
+
+font-size:9px;
+font-weight:600;
+
+color:#ff4f9a;
+
+z-index:50;
+
+box-shadow:
+0 5px 15px rgba(0,0,0,.15);
+}
+#photoFrame:hover{
+  transform: 
+  rotate(0deg)
+  scale(1.03) ;
+animation:scrapbookFloat 4s ease-in-out infinite;
+}
+
+@keyframes scrapbookFloat{
+0%,100%{
+transform:translateY(0);
+}
+50%{
+transform:translateY(-8px);
+}
+}
+.memory-text{
+margin-top:6px;
+font-size:15px;
+opacity:.9;
+letter-spacing:1px;
+}
+.washi{
+position:absolute;
+width:70px;
+height:20px;
+z-index:40;
+opacity:.9;
+}
+
+.washi1{
+background:#ffd6e7;
+top:30px;
+left:-10px;
+transform:rotate(-25deg);
+}
+
+.washi2{
+background:#d8c5ff;
+bottom:40px;
+right:-10px;
+transform:rotate(20deg);
+}
+.mini-note{
+position:absolute;
+right:-35px;
+top:200px;
+background:#fff8c4;
+color:#333;
+padding:6px;
+width:65px;
+font-size:8px;
+font-weight:600;
+border-radius:10px;
+transform:rotate(10deg);
+box-shadow:0 5px 15px rgba(0,0,0,.2);
+z-index:50;
+}
+.corner-flower{
+position:absolute;
+font-size:40px;
+z-index:45;
+}
+
+.flower1{
+left:-10px;
+bottom:10px;
+}
+
+.flower2{
+right:-10px;
+top:60px;
+}
+.handwriting{
+position:absolute;
+top:-35px;
+left:50%;
+transform:translateX(-50%) rotate(-3deg);
+
+font-family:'Great Vibes',cursive;
+font-size:28px;
+color:#ff5ca8;
+
+text-shadow:
+0 0 10px pink,
+0 0 20px white;
+
+z-index:60;
+white-space:nowrap;
+}
+.star{
+position:absolute;
+font-size:18px;
+animation:twinkle 2s infinite;
+}
+
+.star1{
+left:-15px;
+top:120px;
+}
+
+.star2{
+right:-15px;
+bottom:120px;
+}
+
+.star3{
+left:50%;
+top:-10px;
+}
+
+@keyframes twinkle{
+50%{
+opacity:.3;
+transform:scale(1.4);
+}
+}
+.loveTimeline{
+margin-top:10px;
+font-size:14px;
+opacity:.9;
+letter-spacing:1px;
+}
+{
+content:"";
+position:absolute;
+top:0;
+width:20px;
+height:100%;
+
+background:
+repeating-linear-gradient(
+to bottom,
+#111 0 18px,
+transparent 18px 35px
+);
+
+z-index:20;
+}
+
+#photoFrame::before{
+left:0;
+}
+
+#photoFrame::after{
+right:0;
+}
+.cameraStamp{
+position:absolute;
+top:140px;
+left:-20px;
+background:white;
+color:#ff5ca8;
+padding:5px 8px;
+border-radius:8px;
+font-size:8px;
+font-weight:700;
+transform:rotate(-10deg);
+z-index:55;
+}
+.film-strip{
+position:absolute;
+top:0;
+width:24px;
+height:100%;
+
+background:#111;
+
+z-index:30;
+}
+
+.left-film{
+left:0;
+}
+
+.right-film{
+right:0;
+}
+
+.film-strip::before{
+content:"";
+position:absolute;
+inset:0;
+
+background:
+repeating-linear-gradient(
+to bottom,
+transparent 0 12px,
+white 12px 18px
+);
+opacity:.35;
+}
+@keyframes fadeIn{
+from{opacity:0;}
+to{opacity:1;}
+}
+
+@keyframes glowText{
+0%,100%{
+text-shadow:0 0 10px white;
+transform:scale(1);
+}
+50%{
+text-shadow:0 0 25px pink,0 0 40px white;
+transform:scale(1.02);
+}
+}
+
+@keyframes fadeText{
+to{opacity:1;}
+}
+</style>
+
+</head>
+
+<body>
+<div class="bg"></div>
+
+<!-- INTRO -->
+
+<div id="intro">
+
+<h1 class="intro-name">
+Nisva Adnin Diah
+</h1>
+<div class="loveTimeline">
+💖 First Meet • 996 Days • Forever ♾️
+</div>
+<p class="intro-subtitle">
+🎂 Happy 21st Birthday 🎂
+</p>
+
+<p class="intro-date">
+15 Juni 2026
+</p>
+
+<p class="intro-days">
+❤️ 996 Hari Bersama ❤️
+</p>
+
+</div>
+
+<!-- PREMIUM ENVELOPE -->
+
+<div id="envelopeScreen">
+
+<div class="envelope3d" id="envelope">
+
+<div class="envelope-back"></div>
+
+<div class="letter-paper">
+
+<h2>Untuk Pacarku ❤️</h2>
+
+<p>Klik untuk membuka surat</p>
+
+</div>
+
+<div class="envelope-left"></div>
+<div class="envelope-right"></div>
+
+<div class="envelope-bottom"></div>
+
+<div class="envelope-flap"></div>
+
+</div>
+
+</div>
+
+<!-- MAIN SCENE -->
+
+<div id="scene">
+
+<div id="photoFrame" class="polaroidRotate">
+<div class="handwriting">
+Our Best Memories ✨
+</div>
+
+<div class="corner-flower flower1">🌸</div>
+<div class="corner-flower flower2">🌷</div>
+
+<div class="cameraStamp">
+📷 Captured With Love
+</div>
+<div class="washi washi1"></div>
+<div class="washi washi2"></div>
+<div class="birthday-badge">
+<div class="star star1">⭐</div>
+<div class="star star2">⭐</div>
+<div class="star star3">⭐</div>  
+<div class="film-strip left-film"></div>
+<div class="film-strip right-film"></div>  
+   🎂 Happy  21st  Birthday 🎂
+</div>
+<div class="mini-note">
+My Favorite Person ❤️
+</div>
+<div class="sparkle sparkle1">
+✨
+</div>
+
+<div class="sparkle sparkle2">
+✨
+</div>
+<div class="tape tape1"></div>
+<div class="tape tape2"></div>
+
+<div class="sticker sticker1">💖</div>
+<div class="sticker sticker2">🌸</div>
+<div class="sticker sticker3">🎀</div>
+
+<div class="doodle doodle1">✨</div>
+<div class="doodle doodle2">💕</div>
+
+<div class="dateStamp">
+15 JUN 2026
+</div>
+
+<div class="memoryTag">
+OUR MEMORIES ❤️
+</div>
+
+<img id="photo" src="foto1.jpg">
+
+</div>
+
+<div class="photo-name">
+❤️ Nisva Adnin Diah ❤️
+</div>
+
+<div class="memory-text">
+📸 Our Memories Together
+</div>
+
+<div id="loveCounter">
+❤️ 996 Hari Bersama ❤️
+</div>
+
+<div id="letter"></div>
+
+<button id="nextBtn">
+Next ❤️
+</button>
+
+</div>
+
+<!-- ENDING -->
+
+<div id="ending">
+
+<div>
+
+<h1>
+🎂 Happy Birthday anin sayangku ❤️
+</h1>
+
+<p>
+
+Semoga semua impianmu tercapai.
+
+<br><br>
+
+Terima kasih sudah hadir
+dan menjadi bagian terindah
+dalam hidup ipi.
+
+<br><br>
+
+❤️ I Love You ❤️
+
+<br><br>
+
+15 Juni 2026
+
+</p>
+
+</div>
+
+</div>
+
+<!-- MUSIC -->
+
+<audio id="music" loop>
+
+<source src="musik.mp3" type="audio/mpeg">
+
+</audio>
+
+<script>
+
+/* =========================
+   PHOTO DATA
+========================= */
+
+const photos=[
+"foto1.jpg",
+"foto2.jpg",
+"foto3.jpg",
+"foto4.jpg",
+"foto5.jpg",
+"foto6.jpg",
+"foto7.jpg"
+];
+
+const texts=[
+
+`Happy Birthday Sayang ❤️
+
+Hari ini adalah hari yang spesial,
+karena seseorang yang begitu berarti lahir ke dunia.
+
+Ipi bersyukur kamu ada di dunia ini.`,
+
+`Terima kasih sudah hadir dalam hidup ipi.
+
+Terima kasih untuk setiap tawa,
+setiap cerita,
+dan setiap kenangan yang telah kita bagi.`,
+
+`996 hari bukan waktu yang sebentar.
+
+Banyak cerita,
+tawa,
+dan momen yang sudah kita lewati bersama.`,
+
+`Semoga di usia 21 tahun ini,
+semua impianmu semakin dekat
+untuk diwujudkan.
+
+Semoga kamu selalu sehat
+dan bahagia.`,
+
+`Semoga hidupmu dipenuhi
+hal-hal baik yang datang
+tanpa diduga.
+
+Semoga semua doa terbaikmu
+menjadi kenyataan.`,
+
+`Dan kalau dunia sedang
+tidak baik-baik saja,
+
+Ipi harap kamu tetap kuat.
+
+Karena kamu lebih hebat
+dari yang kamu pikirkan.`,
+
+`Happy Birthday Nisva ❤️
+
+Terima kasih sudah hadir
+dan menjadi bagian terindah
+dalam hidup ipi.
+
+I Love You ❤️`
+
+];
+
+let current=0;
+let typingInterval;
+
+/* =========================
+   INTRO
+========================= */
+
+window.onload=()=>{
+
+setTimeout(()=>{
+
+document.getElementById("intro").style.display="none";
+
+document.getElementById("envelopeScreen").style.display="flex";
+
+},3500);
+
+};
+
+/* =========================
+   MUSIC
+========================= */
+
+function startMusic(){
+
+const music=document.getElementById("music");
+
+music.volume=0.5;
+
+music.play().catch(()=>{});
+
+}
+
+/* =========================
+   OPEN ENVELOPE
+========================= */
+
+const envelope=document.getElementById("envelope");
+
+envelope.onclick=()=>{
+
+startMusic();
+
+envelope.classList.add("open");
+
+fireworks();
+
+setTimeout(()=>{
+
+document.getElementById("envelopeScreen").style.display="none";
+
+document.getElementById("scene").style.display="flex";
+
+showScene();
+
+},2500);
+
+};
+
+/* =========================
+   SHOW SCENE
+========================= */
+
+function showScene(){
+
+const photo=document.getElementById("photo");
+
+photo.style.opacity="0";
+
+setTimeout(()=>{
+
+photo.src=photos[current];
+
+photo.style.opacity="1";
+
+},400);
+
+typeWriter(texts[current]);
+
+}
+
+/* =========================
+   TYPEWRITER
+========================= */
+
+function typeWriter(text){
+
+clearInterval(typingInterval);
+
+const box=document.getElementById("letter");
+
+box.textContent="";
+
+let i=0;
+
+typingInterval=setInterval(()=>{
+
+box.textContent += text.charAt(i);
+
+i++;
+
+if(i>=text.length){
+
+clearInterval(typingInterval);
+
+}
+
+},25);
+
+}
+
+/* =========================
+   NEXT BUTTON
+========================= */
+
+document.getElementById("nextBtn").onclick=()=>{
+
+fireworks();
+
+current++;
+
+if(current>=texts.length){
+
+document.getElementById("scene").style.display="none";
+
+document.getElementById("ending").style.display="flex";
+
+megaFireworks();
+
+return;
+
+}
+
+showScene();
+
+};
+
+/* =========================
+   FLOATING PARTICLES
+========================= */
+
+const particles=[
+"❤️",
+"💕",
+"💖",
+"✨",
+"🌸",
+"💐",
+"💫"
+];
+
+setInterval(()=>{
+
+let p=document.createElement("div");
+
+p.className="particle";
+
+p.innerHTML=
+particles[
+Math.floor(Math.random()*particles.length)
+];
+
+p.style.left=Math.random()*100+"vw";
+
+p.style.top="-40px";
+
+p.style.fontSize=
+(16+Math.random()*24)+"px";
+
+p.style.animationDuration=
+(5+Math.random()*6)+"s";
+
+document.body.appendChild(p);
+
+setTimeout(()=>{
+
+p.remove();
+
+},12000);
+
+},250);
+
+/* =========================
+   FIREWORKS
+========================= */
+
+function fireworks(){
+
+for(let i=0;i<70;i++){
+
+let f=document.createElement("div");
+
+f.className="particle";
+
+f.innerHTML=[
+"✨","💖","💕","❤️","🌸","💫"
+][Math.floor(Math.random()*6)];
+
+f.style.left="50vw";
+f.style.top="50vh";
+
+f.style.fontSize=
+(18+Math.random()*20)+"px";
+
+document.body.appendChild(f);
+
+let angle=Math.random()*Math.PI*2;
+let distance=80+Math.random()*250;
+
+let x=Math.cos(angle)*distance;
+let y=Math.sin(angle)*distance;
+
+f.animate(
+[
+{
+transform:"translate(0,0)",
+opacity:1
+},
+{
+transform:`translate(${x}px,${y}px)`,
+opacity:0
+}
+],
+{
+duration:1500
+}
+);
+
+setTimeout(()=>{
+f.remove();
+},1500);
+
+}
+
+}
+
+/* =========================
+   SAKURA
+========================= */
+
+function sakuraBurst(){
+
+for(let i=0;i<50;i++){
+
+let s=document.createElement("div");
+
+s.className="particle";
+
+s.innerHTML="🌸";
+
+s.style.left=
+Math.random()*100+"vw";
+
+s.style.top="-20px";
+
+s.style.fontSize=
+(18+Math.random()*20)+"px";
+
+s.style.animationDuration=
+(4+Math.random()*4)+"s";
+
+document.body.appendChild(s);
+
+setTimeout(()=>{
+s.remove();
+},9000);
+
+}
+
+}
+
+/* =========================
+   MEGA ENDING
+========================= */
+
+function megaFireworks(){
+
+let count=0;
+
+let show=setInterval(()=>{
+
+fireworks();
+
+sakuraBurst();
+
+count++;
+
+if(count>12){
+
+clearInterval(show);
+
+}
+
+},700);
+
+}
+
+/* =========================
+   LETTER GLOW
+========================= */
+
+setInterval(()=>{
+
+const letter=document.getElementById("letter");
+
+if(!letter) return;
+
+letter.style.boxShadow=
+"0 0 35px rgba(255,255,255,.25)";
+
+setTimeout(()=>{
+
+letter.style.boxShadow=
+"0 0 10px rgba(255,255,255,.05)";
+
+},1000);
+
+},2000);
+/* =========================
+   ROSE PETALS V4.2
+========================= */
+
+setInterval(()=>{
+
+let rose=document.createElement("div");
+
+rose.className="rose";
+
+rose.innerHTML="🌹";
+
+rose.style.left=Math.random()*100+"vw";
+
+rose.style.fontSize=
+(18+Math.random()*18)+"px";
+
+rose.style.animationDuration=
+(6+Math.random()*5)+"s";
+
+document.body.appendChild(rose);
+
+setTimeout(()=>{
+rose.remove();
+},12000);
+
+},1200);
+
+</script>
+
+</body>
+</html>
